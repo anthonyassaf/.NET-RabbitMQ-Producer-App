@@ -17,6 +17,7 @@ namespace Producer
     public Form1()
     {
       InitializeComponent();
+      Text = "Producer";
     }
 
 
