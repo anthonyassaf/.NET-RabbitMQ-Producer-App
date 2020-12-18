@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Producer.Injector;
+using Producer.Producer;
 using RabbitMQ.Client;
 
 namespace Producer
@@ -14,10 +16,15 @@ namespace Producer
   public partial class Form1 : Form
   {
     private string queueName = "";
+    private IMessageServiceInjector injector;
+    private IProducer app;
+    
     public Form1()
     {
       InitializeComponent();
       Text = "Producer";
+      injector = new RabbitMQServiceInjector();
+      this.FormBorderStyle = FormBorderStyle.FixedSingle;
     }
 
 
@@ -35,15 +42,9 @@ namespace Producer
       }
       else
       {
-        Injection cs = new Injection(new Channel());
-        var channel = cs.getChannel();
-        channel.QueueDeclare(queue: queueName, durable: false, exclusive: false, autoDelete: false,
-          arguments: null);
-        string message = richTextBox1.Text;
-        var body = Encoding.UTF8.GetBytes(message);
-        channel.BasicPublish(exchange: "", routingKey: queueName, basicProperties: null, body: body);
-        
-        MessageBox.Show("Sent : " + message, "Message Sent");
+        var message = richTextBox1.Text;
+        app = injector.getProducer();
+        app.processMessages(message, queueName);
       }
             
       richTextBox1.Clear(); 
@@ -65,4 +66,5 @@ namespace Producer
       
     }
   }
+  
 }

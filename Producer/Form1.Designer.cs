@@ -51,7 +51,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(948, 776);
+            this.panel1.Size = new System.Drawing.Size(1000, 707);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -59,9 +59,9 @@
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (192)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(656, 681);
+            this.button3.Location = new System.Drawing.Point(679, 560);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 60);
+            this.button3.Size = new System.Drawing.Size(217, 79);
             this.button3.TabIndex = 5;
             this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = false;
@@ -100,9 +100,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(137, 681);
+            this.button1.Location = new System.Drawing.Point(110, 560);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 60);
+            this.button1.Size = new System.Drawing.Size(217, 79);
             this.button1.TabIndex = 1;
             this.button1.Text = "Send";
             this.button1.UseVisualStyleBackColor = false;
@@ -110,9 +110,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(27, 133);
+            this.richTextBox1.Location = new System.Drawing.Point(57, 157);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(899, 522);
+            this.richTextBox1.Size = new System.Drawing.Size(885, 350);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -121,7 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(948, 776);
+            this.ClientSize = new System.Drawing.Size(1000, 707);
             this.Controls.Add(this.panel1);
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "Form1";

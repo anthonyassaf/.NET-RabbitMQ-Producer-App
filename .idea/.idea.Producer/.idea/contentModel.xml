@@ -8,14 +8,19 @@
       <e p="Producer" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Channel.cs" t="Include" />
         <e p="Form1.cs" t="Include" />
         <e p="Form1.Designer.cs" t="Include" />
         <e p="Form1.resx" t="Include" />
-        <e p="IChannel.cs" t="Include" />
-        <e p="Injection.cs" t="Include" />
+        <e p="Injector" t="Include">
+          <e p="IMessageServiceInjector.cs" t="Include" />
+          <e p="RabbitMQServiceInjector.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
+        <e p="Producer" t="Include">
+          <e p="IProducer.cs" t="Include" />
+          <e p="Producer.cs" t="Include" />
+        </e>
         <e p="Producer.csproj" t="IncludeRecursive" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
@@ -24,6 +29,10 @@
           <e p="Resources.resx" t="Include" />
           <e p="Settings.Designer.cs" t="Include" />
           <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Service" t="Include">
+          <e p="IMessageService.cs" t="Include" />
+          <e p="RabbitMQService.cs" t="Include" />
         </e>
       </e>
       <e p="Producer.sln" t="IncludeFlat" />
